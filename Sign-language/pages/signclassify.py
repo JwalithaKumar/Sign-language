@@ -30,5 +30,5 @@ if uploaded_file!=None:
 x = st.button("Predict")
 if x:
     with st.spinner("Thinking..."):
-        model = load_model('./model/SignL.h5')
+        model = load_model('./models/SignL.h5')
 
