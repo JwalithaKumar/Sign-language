@@ -52,8 +52,9 @@ if x:
         custom_class_labels = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z","del","nothing","space"]
         predicted_class_label = custom_class_labels[predicted_class_index]
         #Print the predicted class label and its corresponding probability
+        st.write(predicted_class_index)
         st.write(predicted_class_label)
-        st.write(predictions[0][predicted_class_index])
+        
         
         
 
