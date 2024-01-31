@@ -38,7 +38,7 @@ if uploaded_file!=None:
 x = st.button("Predict")
 if x:
     with st.spinner("Thinking..."):
-        model = load_model('./models/SignL.h5')
+        model = load_model('sep_5.h5', compile = False)
         img_array = image.img_to_array(img)
         img_array = np.expand_dims(img_array, axis=0)
         img_array = preprocess_input(img_array)
