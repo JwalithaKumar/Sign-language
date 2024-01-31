@@ -41,7 +41,7 @@ x = st.button("Predict")
 if x:
     with st.spinner("Thinking..."):
         model = load_model('Sign-language/models/SignL.h5', compile = False)
-        image = Image.open(uploadedfile)
+        image = Image.open(uploaded_file)
         size = (224, 224)
         image = ImageOps.fit(image, size)
         image_array = np.asarray(image)
