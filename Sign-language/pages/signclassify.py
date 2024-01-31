@@ -45,9 +45,9 @@ if x:
         size = (224, 224)
         image = ImageOps.fit(image, size)
         image_array = np.asarray(image)
-        img_array = np.expand_dims(img_array, axis=0)
-        img_array = preprocess_input(img_array)
-        predictions = model.predict(img_array)
+        image_array = np.expand_dims(image_array, axis=0)
+        image_array = preprocess_input(image_array)
+        predictions = model.predict(image_array)
         custom_class_labels = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z","del","nothing","space"]
         predicted_class_label = custom_class_labels[predicted_class_index]
         #Print the predicted class label and its corresponding probability
