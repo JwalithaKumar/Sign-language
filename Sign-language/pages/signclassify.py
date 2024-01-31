@@ -5,6 +5,7 @@ import random
 import os
 import numpy as np
 import streamlit.components.v1 as components
+from PIL import Image, ImageOps 
 from tensorflow.keras.models import load_model 
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications import MobileNet
