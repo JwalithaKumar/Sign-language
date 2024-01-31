@@ -2,5 +2,6 @@ tensorflow
 tensorflow.keras.models
 tensorflow.keras.preprocessing
 tensorflow.keras.preprocessing.image
+PIL
 tensorflow.keras.applications.mobilenet
 pandas
