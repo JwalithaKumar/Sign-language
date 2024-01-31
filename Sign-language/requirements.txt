@@ -1,3 +1,4 @@
 tensorflow
 tensorflow.keras.models
+tensorflow.keras.preprocessing
 pandas
