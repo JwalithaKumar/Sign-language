@@ -43,6 +43,11 @@ if x:
         img_array = np.expand_dims(img_array, axis=0)
         img_array = preprocess_input(img_array)
         predictions = model.predict(img_array)
+        custom_class_labels = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z","del","nothing","space"]
+        predicted_class_label = custom_class_labels[predicted_class_index]
+        #Print the predicted class label and its corresponding probability
+        print("Predicted class:", predicted_class_label)
+        print("Accuracy", predictions[0][predicted_class_index])
         
         
 
