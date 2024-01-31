@@ -7,6 +7,9 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications import MobileNet
 from tensorflow.keras.applications.mobilenet import preprocess_input
+import subprocess
+if not os.path.isfile('./models/SignL.h5'):
+    subprocess.run(['curl --output SignL.h5 "https://media.githubusercontent.com/media/JwalithaKumar/Sign-language/main/sep_5.h5"'], shell=True)
 
 
 st.set_page_config(
