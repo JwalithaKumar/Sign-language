@@ -8,8 +8,8 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications import MobileNet
 from tensorflow.keras.applications.mobilenet import preprocess_input
-import subprocess
-if not os.path.isfile('Sign-language/models/SignL.h5'):
+#import subprocess
+#if not os.path.isfile('Sign-language/models/SignL.h5'):
     subprocess.run(['curl --output SignL.h5 "https://media.githubusercontent.com/media/JwalithaKumar/Sign-language/main/sep_5.h5"'], shell=True)
 
 
@@ -38,7 +38,7 @@ if uploaded_file!=None:
 x = st.button("Predict")
 if x:
     with st.spinner("Thinking..."):
-        model = load_model('sep_5.h5', compile = False)
+        model = load_model('Sign-language/models/SignL.h5', compile = False)
         img_array = image.img_to_array(img)
         img_array = np.expand_dims(img_array, axis=0)
         img_array = preprocess_input(img_array)
