@@ -42,8 +42,8 @@ if x:
     with st.spinner("Thinking..."):
         model = load_model('Sign-language/models/SignL.h5', compile = False)
         image = Image.open(uploaded_file)
-        #size = (224, 224)
-        #image = ImageOps.fit(image, size)
+        size = (224, 224)
+        image = ImageOps.fit(image, size)
         image_array = np.asarray(image)
         image_array = np.expand_dims(image_array, axis=0)
         image_array = preprocess_input(image_array)
