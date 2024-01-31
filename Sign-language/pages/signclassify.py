@@ -39,7 +39,7 @@ x = st.button("Predict")
 if x:
     with st.spinner("Thinking..."):
         model = load_model('Sign-language/models/SignL.h5', compile = False)
-        img_array = image.img_to_array(uploaded_file)
+        img_array = np.asarray(uploaded_file)
         img_array = np.expand_dims(img_array, axis=0)
         img_array = preprocess_input(img_array)
         predictions = model.predict(img_array)
