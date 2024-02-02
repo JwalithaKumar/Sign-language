@@ -41,7 +41,7 @@ components.html(
 
 def page_layout():
    
-    st.write("sign language is an app developed by SVEC to bridge the communication gap between deaf and normal people")
+    st.write("Sign language is an app developed by SVEC to bridge the communication gap between deaf and normal people")
     st.write("Developed By SVEC")
     st.markdown("## Benefits:")
     st.write("- Efficient Emergency Communication")
